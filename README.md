@@ -1,4 +1,4 @@
-## senpai bot
+## greentext bot
 
 this is a simple reddit bot which **downloads** "hot" posts of the given subreddits.
 
@@ -8,7 +8,6 @@ In order to use this bot you need to install the dependencies
 
 ```
 pip install -r requirements.txt
-
 ```
 ### Installation
 
@@ -25,7 +24,6 @@ Create a .env file
   password="your_password"
   user_agent="your_user_agent"
   username="your_username"
-
 ```
 
 In between those quotes, you have to add your tokens which you generated previously.
@@ -44,5 +42,4 @@ The images will be downloaded in the img folder.
 
 ### Have doubts? 
 
-Feel free to raise an issue.
-
+google them
