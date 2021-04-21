@@ -8,5 +8,5 @@ python-decouple==3.4
 requests==2.25.1
 six==1.15.0
 update-checker==0.18.0
-urllib3==1.26.2
+urllib3==1.26.4
 websocket-client==0.57.0
