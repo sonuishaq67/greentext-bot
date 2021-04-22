@@ -1,11 +1,11 @@
 import praw
 import time
 import bot
+from decouple import UndefinedValueError
 
 reddit = bot.auth()
 while reddit:
     try:
         bot.extract(reddit)
-    except Exception as err:
-        print(err)
-        time.sleep(20)
+    except UndefinedValueError as err:
+        print("Please create a .env file using the Readme.md")

@@ -18,18 +18,18 @@ def auth():
 
 
 def extract(reddit):
-    with open('subreddits.txt', 'r+') as subs:
-        f = subs.read()
+    with open('subreddits', 'r+') as subs:
+        substrs = subs.read()
     try:
-        subreddit = reddit.subreddit(f)
+        print(substrs)
+        subreddit = reddit.subreddit(substrs)
         for submission in subreddit.hot(limit=25):
-             x = submission.url
-             r = requests.get(x, allow_redirects=True)
-             for i in range(0,1):
-                open(f'./img/{random.random()}.jpg', 'wb').write(r.content)
-        print("<----done---->")
-        print("downloaded")
-        print("<----sugoi---->")
+             img_url = submission.url
+             image_ext=str(img_url).split('/')[-1].split('.')[-1]
+             title=submission.title
+             print(image_ext)
+             r = requests.get(img_url, allow_redirects=True)
+             open(f'./img/{title}.{image_ext}', 'wb').write(r.content)
         exit(0)
     except Exception as err:
         print(err)
