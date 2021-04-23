@@ -143,6 +143,5 @@ cython_debug/
 
 
 # Img Directory
-img/*.jpg
-img/*.png
+img/
 subreddits
